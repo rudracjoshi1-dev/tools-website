@@ -187,7 +187,7 @@ p span { font-weight: bold; }
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px; width: 40px;
+  height: 18px; width: 18px;
   left: 3px; bottom: 3px;
   background: #fff;
   transition: 0.4s;
@@ -261,7 +261,7 @@ input:checked + .slider:before { transform: translateX(26px); }
 .length-selector button:hover { background: #00f2fe; }
 
 .length-selector input[type="range"] {
-  width: 400px;
+  width: 100px;
   -webkit-appearance: none;
   height: 10px;
   background: #ccc;
