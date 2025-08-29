@@ -261,7 +261,7 @@ input:checked + .slider:before { transform: translateX(26px); }
 .length-selector button:hover { background: #00f2fe; }
 
 .length-selector input[type="range"] {
-  width: 100px;
+  width: 100%;
   -webkit-appearance: none;
   height: 10px;
   background: #ccc;
