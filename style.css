@@ -201,6 +201,10 @@ input:checked + .slider:before { transform: translateX(26px); }
 .password-controls button,
 .password-box button,
 .tool-card .btn {
+   white-space: nowrap;     /* Prevents breaking text */
+  font-size: 0.9em;        /* Slightly smaller text */
+  padding: 8px 12px;
+  max-width: 100%;
   background: #4facfe;
   color: #fff;
   border: none;
