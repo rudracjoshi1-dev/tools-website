@@ -290,6 +290,8 @@ input:checked + .slider:before { transform: translateX(26px); }
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .tool-card {
