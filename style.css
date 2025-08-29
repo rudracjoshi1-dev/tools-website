@@ -411,3 +411,24 @@ input:checked + .slider:before { transform: translateX(26px); }
 .chart-container.large canvas {
   height: 500px !important;
 }
+/* Dropdown menu hidden by default */
+nav ul li .dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  z-index: 10;
+}
+
+/* Show when open */
+nav ul li.open .dropdown-menu {
+  display: flex;
+}
+
