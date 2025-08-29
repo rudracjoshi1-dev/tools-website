@@ -151,11 +151,16 @@ p span { font-weight: bold; }
 /* =======================
    PASSWORD GENERATOR
 ======================= */
+/* =======================
+   PASSWORD GENERATOR
+======================= */
 .password-controls {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .toggle-group {
@@ -163,6 +168,7 @@ p span { font-weight: bold; }
   align-items: center;
   margin-bottom: 15px;
   gap: 10px;
+  flex-wrap: wrap; /* Prevents overflow on small screens */
 }
 
 /* Toggle Switch */
@@ -201,7 +207,7 @@ input:checked + .slider:before { transform: translateX(26px); }
 .password-controls button,
 .password-box button,
 .tool-card .btn {
-   white-space: nowrap;     /* Prevents breaking text */
+  white-space: nowrap;     /* Prevents breaking text */
   font-size: 0.9em;        /* Slightly smaller text */
   padding: 8px 12px;
   max-width: 100%;
@@ -225,16 +231,27 @@ input:checked + .slider:before { transform: translateX(26px); }
   align-items: center;
   gap: 15px;
   margin-top: 15px;
+  flex-wrap: wrap; /* allows input + button to wrap on small screens */
+  width: 100%;
 }
 
 .password-box input {
-  width: 300px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 100%;
   text-align: center;
   font-size: 1.2em;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+#copyBtn {
+  flex-shrink: 0; /* prevents squishing */
+  width: auto;
+  min-width: 120px;
 }
 
 /* =======================
@@ -246,6 +263,9 @@ input:checked + .slider:before { transform: translateX(26px); }
   gap: 10px;
   margin-bottom: 15px;
   justify-content: center;
+  flex-wrap: wrap; /* responsive */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .length-selector button {
@@ -261,7 +281,9 @@ input:checked + .slider:before { transform: translateX(26px); }
 .length-selector button:hover { background: #00f2fe; }
 
 .length-selector input[type="range"] {
-  width: 100%;
+  flex: 1;
+  min-width: 150px;
+  max-width: 400px;
   -webkit-appearance: none;
   height: 10px;
   background: #ccc;
@@ -279,7 +301,13 @@ input:checked + .slider:before { transform: translateX(26px); }
   width: 24px; height: 24px; background: #4facfe; border-radius: 50%;
   cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: background 0.3s;
 }
-#lengthValue { font-weight: bold; font-size: 1.2em; min-width: 30px; text-align: center; }
+
+#lengthValue {
+  font-weight: bold;
+  font-size: 1.2em;
+  min-width: 30px;
+  text-align: center;
+}
 
 /* =======================
    HOMEPAGE TOOL CARDS
