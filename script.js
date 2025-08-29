@@ -168,3 +168,14 @@ function drawAmortizationChart(loan, monthlyPayment, totalPayments, monthlyInter
 if(yearsSlider) updateYearsDisplay();
 
 // Optionally, you can attach input listeners for principal and interest sliders for live update
+
+// Mobile dropdown toggle
+document.querySelectorAll("nav .dropdown > a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    if (window.innerWidth <= 768) { // only for mobile
+      e.preventDefault();
+      this.parentElement.classList.toggle("open");
+    }
+  });
+});
+
